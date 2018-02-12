@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Tc-k3-rGx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="smd-Co-GFA">
+            <objects>
+                <viewController id="1Tc-k3-rGx" customClass="MapViewController" customModule="The_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KIU-Dq-AYn"/>
+                        <viewControllerLayoutGuide type="bottom" id="she-Pl-mou"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y3x-2c-14l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kSd-Nz-yVD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1Tc-k3-rGx" id="7PP-sR-zjZ"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iw6-iz-rdu">
+                                <rect key="frame" x="238" y="8" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kSd-Nz-yVD" secondAttribute="bottom" id="5rZ-Sh-txN"/>
+                            <constraint firstAttribute="trailing" secondItem="kSd-Nz-yVD" secondAttribute="trailing" id="9ra-JJ-1Hv"/>
+                            <constraint firstItem="Iw6-iz-rdu" firstAttribute="trailing" secondItem="y3x-2c-14l" secondAttribute="trailingMargin" id="JiR-o2-as6"/>
+                            <constraint firstItem="kSd-Nz-yVD" firstAttribute="top" secondItem="y3x-2c-14l" secondAttribute="top" id="RkC-TG-VbT"/>
+                            <constraint firstItem="Iw6-iz-rdu" firstAttribute="top" secondItem="y3x-2c-14l" secondAttribute="topMargin" constant="8" id="Zdo-jR-FWP"/>
+                            <constraint firstItem="kSd-Nz-yVD" firstAttribute="leading" secondItem="y3x-2c-14l" secondAttribute="leading" id="iT8-hV-laT"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <fixedSimulatedSizeMetrics key="simulatedDestinationMetrics">
+                        <size key="portraitSize" width="375" height="603"/>
+                        <size key="landscapeSize" width="603" height="375"/>
+                    </fixedSimulatedSizeMetrics>
+                    <connections>
+                        <outlet property="map" destination="kSd-Nz-yVD" id="ZWz-Re-tUC"/>
+                        <outlet property="mapSegmentedControl" destination="Iw6-iz-rdu" id="13i-0M-tTH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkk-19-5zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="1113"/>
+        </scene>
+    </scenes>
+</document>
