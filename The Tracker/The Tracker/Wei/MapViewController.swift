@@ -19,9 +19,20 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        map.delegate = self
-        locationManager.delegate = self
         
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        map.delegate = self
+        map.showsUserLocation = true
+        map.userTrackingMode = .follow
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if CLLocationManager.authorizationStatus() == .notDetermined{
+            locationManager.requestAlwaysAuthorization()
+        }
         
     }
     
