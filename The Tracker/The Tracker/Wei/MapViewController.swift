@@ -15,9 +15,15 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
 
     @IBOutlet weak var map:MKMapView!
     @IBOutlet weak var mapSegmentedControl: UISegmentedControl!
+    let locationManager = CLLocationManager()
     
-    // 我只有連接 UI 的 其他的就讓您寫啦
-    // 加油喔
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        map.delegate = self
+        locationManager.delegate = self
+        
+        
+    }
     
     
     
