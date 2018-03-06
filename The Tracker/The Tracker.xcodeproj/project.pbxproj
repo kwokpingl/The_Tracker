@@ -25,6 +25,11 @@
 		BF2B80EF2031EB390080C671 /* Others.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B80ED2031EB390080C671 /* Others.storyboard */; };
 		BF2B80F42031ECA70080C671 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B80F22031ECA70080C671 /* Settings.storyboard */; };
 		BF2B80F62031ED610080C671 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B80F52031ED610080C671 /* SettingsViewController.swift */; };
+		E7C3EEAC203EBD9E00890D8D /* DataBaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3EEAB203EBD9E00890D8D /* DataBaseConstants.swift */; };
+		E7C73F89203D50BC005EB22B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C73F88203D50BC005EB22B /* CoreData.framework */; };
+		E7C73F94203D52F5005EB22B /* TracksData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7C73F92203D52F5005EB22B /* TracksData.xcdatamodeld */; };
+		E7D9E628204D5997008FC560 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9E627204D5997008FC560 /* CoreDataStack.swift */; };
+		E7D9E62A204D5A44008FC560 /* TracksHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9E629204D5A44008FC560 /* TracksHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		BF2B80EE2031EB390080C671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Others.storyboard; sourceTree = "<group>"; };
 		BF2B80F32031ECA70080C671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		BF2B80F52031ED610080C671 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Jimmy/SettingsViewController.swift; sourceTree = "<group>"; };
+		E7C3EEAB203EBD9E00890D8D /* DataBaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseConstants.swift; sourceTree = "<group>"; };
+		E7C73F88203D50BC005EB22B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E7C73F93203D52F5005EB22B /* TracksHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TracksHistory.xcdatamodel; sourceTree = "<group>"; };
+		E7D9E627204D5997008FC560 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E7D9E629204D5A44008FC560 /* TracksHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C73F89203D50BC005EB22B /* CoreData.framework in Frameworks */,
 				BF2B80D72031DC390080C671 /* CoreLocation.framework in Frameworks */,
 				BF2B80D52031DC320080C671 /* MapKit.framework in Frameworks */,
 			);
@@ -128,7 +139,11 @@
 		BF2B80CF2031DB510080C671 /* Sally */ = {
 			isa = PBXGroup;
 			children = (
+				E7D9E627204D5997008FC560 /* CoreDataStack.swift */,
+				E7D9E629204D5A44008FC560 /* TracksHistory.swift */,
 				BF2B80D82031DF6C0080C671 /* DataBaseManager.swift */,
+				E7C3EEAB203EBD9E00890D8D /* DataBaseConstants.swift */,
+				E7C73F92203D52F5005EB22B /* TracksData.xcdatamodeld */,
 			);
 			name = Sally;
 			sourceTree = "<group>";
@@ -148,6 +163,7 @@
 		BF2B80D32031DC320080C671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7C73F88203D50BC005EB22B /* CoreData.framework */,
 				BF2B80D62031DC390080C671 /* CoreLocation.framework */,
 				BF2B80D42031DC320080C671 /* MapKit.framework */,
 			);
@@ -201,7 +217,8 @@
 				TargetAttributes = {
 					BF2B80B52031D0380080C671 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8SLV3B6FU8;
+						DevelopmentTeam = XB4RF5FU56;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -247,11 +264,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2B80D92031DF6C0080C671 /* DataBaseManager.swift in Sources */,
+				E7C73F94203D52F5005EB22B /* TracksData.xcdatamodeld in Sources */,
+				E7D9E62A204D5A44008FC560 /* TracksHistory.swift in Sources */,
 				BF2B80EC2031E9B90080C671 /* RecordsViewControllers.swift in Sources */,
 				BF0686482041686200D96AAA /* RecordModel.swift in Sources */,
 				BF06864620410DFF00D96AAA /* RecordViewModel.swift in Sources */,
+				E7D9E628204D5997008FC560 /* CoreDataStack.swift in Sources */,
 				BF2B80D22031DC050080C671 /* MapViewController.swift in Sources */,
 				BF2B80DB2031E0B70080C671 /* ViewController.swift in Sources */,
+				E7C3EEAC203EBD9E00890D8D /* DataBaseConstants.swift in Sources */,
 				BF2B80BA2031D0380080C671 /* AppDelegate.swift in Sources */,
 				BF2B80F62031ED610080C671 /* SettingsViewController.swift in Sources */,
 				BF06864A2041BEB500D96AAA /* Constants.swift in Sources */,
@@ -403,12 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SLV3B6FU8;
+				DEVELOPMENT_TEAM = XB4RF5FU56;
 				INFOPLIST_FILE = "The Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WSJProject.The-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -416,12 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8SLV3B6FU8;
+				DEVELOPMENT_TEAM = XB4RF5FU56;
 				INFOPLIST_FILE = "The Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.WSJProject.The-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -447,6 +470,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E7C73F92203D52F5005EB22B /* TracksData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E7C73F93203D52F5005EB22B /* TracksHistory.xcdatamodel */,
+			);
+			currentVersion = E7C73F93203D52F5005EB22B /* TracksHistory.xcdatamodel */;
+			path = TracksData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF2B80AE2031D0370080C671 /* Project object */;
 }
