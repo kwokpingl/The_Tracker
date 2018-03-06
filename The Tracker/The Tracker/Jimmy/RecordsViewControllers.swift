@@ -10,5 +10,12 @@ import Foundation
 import UIKit
 
 class RecordsViewController : UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 }

@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct RecordModelKey {
+    static let startDate    = "startDate",
+    endDate                 = "endDate",
+    pace                    = "pace",
+    description             = "description",
+    coordinate              = "coordinate",
+    lat                     = "latitude",
+    lng                     = "longitude"
+}

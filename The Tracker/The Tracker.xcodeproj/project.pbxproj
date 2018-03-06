@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF06864620410DFF00D96AAA /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF06864520410DFF00D96AAA /* RecordViewModel.swift */; };
+		BF0686482041686200D96AAA /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0686472041686200D96AAA /* RecordModel.swift */; };
+		BF06864A2041BEB500D96AAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0686492041BEB500D96AAA /* Constants.swift */; };
 		BF2B80BA2031D0380080C671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2B80B92031D0380080C671 /* AppDelegate.swift */; };
 		BF2B80BF2031D0380080C671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2B80BD2031D0380080C671 /* Main.storyboard */; };
 		BF2B80C12031D0380080C671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2B80C02031D0380080C671 /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF06864520410DFF00D96AAA /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordViewModel.swift; path = Jimmy/ViewModel/RecordViewModel.swift; sourceTree = "<group>"; };
+		BF0686472041686200D96AAA /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordModel.swift; path = Jimmy/Model/RecordModel.swift; sourceTree = "<group>"; };
+		BF0686492041BEB500D96AAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Global/Constants.swift; sourceTree = "<group>"; };
 		BF2B80B62031D0380080C671 /* The Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2B80B92031D0380080C671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2B80BE2031D0380080C671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF06864120410D0400D96AAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF0686472041686200D96AAA /* RecordModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BF06864220410D0D00D96AAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF06864520410DFF00D96AAA /* RecordViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		BF2B80AD2031D0370080C671 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +136,8 @@
 		BF2B80D02031DB570080C671 /* Jimmy */ = {
 			isa = PBXGroup;
 			children = (
+				BF06864220410D0D00D96AAA /* ViewModel */,
+				BF06864120410D0400D96AAA /* Model */,
 				BF2B80DA2031E0B70080C671 /* ViewController.swift */,
 				BF2B80EB2031E9B90080C671 /* RecordsViewControllers.swift */,
 				BF2B80F52031ED610080C671 /* SettingsViewController.swift */,
@@ -133,6 +157,7 @@
 		BF2B80DC2031E0BF0080C671 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				BF0686492041BEB500D96AAA /* Constants.swift */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -223,10 +248,13 @@
 			files = (
 				BF2B80D92031DF6C0080C671 /* DataBaseManager.swift in Sources */,
 				BF2B80EC2031E9B90080C671 /* RecordsViewControllers.swift in Sources */,
+				BF0686482041686200D96AAA /* RecordModel.swift in Sources */,
+				BF06864620410DFF00D96AAA /* RecordViewModel.swift in Sources */,
 				BF2B80D22031DC050080C671 /* MapViewController.swift in Sources */,
 				BF2B80DB2031E0B70080C671 /* ViewController.swift in Sources */,
 				BF2B80BA2031D0380080C671 /* AppDelegate.swift in Sources */,
 				BF2B80F62031ED610080C671 /* SettingsViewController.swift in Sources */,
+				BF06864A2041BEB500D96AAA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +444,7 @@
 				BF2B80CA2031D0380080C671 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    enum ButtonType:Int {
+        case Setup = 1
+        case History
+        case Others
+    }
+    
     @IBOutlet weak var mapContainerView: UIView!
 
     @IBOutlet weak var settingContainerView: UIView!
@@ -17,8 +24,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        navigationController?.setNavigationBarHidden(true, animated: false)
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +38,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonsPressed(_ sender: UIButton) {
+        
+        if let buttonType = ButtonType.init(rawValue: sender.tag) {
+            switch buttonType {
+            case .Setup :
+                settingContainerView.isHidden = !settingContainerView.isHidden
+            default:
+                return
+            }
+        }
+        
+        
+    }
+    
 
 }
 
